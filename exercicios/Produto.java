@@ -1,19 +1,31 @@
 package exercicios;
 
 class Produto {
-    protected String nome;
-    protected double preco;
-    protected int quantidadeEmEstoque;
+    private String nome;
+    private double preco;
+    private int quantidadeEmEstoque;
 
-    public void InicializandoAtb(String nomeInit, double precoInit, int quantidadeEmEstoqueInit) {
+    public void setNome(String nomeInit) { // definindo o nome
         nome = nomeInit;
-        preco = precoInit;
-        quantidadeEmEstoque = quantidadeEmEstoqueInit;
+    }
 
-        System.out.println("produtos: ");
-        System.out.println("nome: " + nome);
-        System.out.println("preco: " + preco);
-        System.out.println("qtd em estoque: " + quantidadeEmEstoque);
-        
+    public void setPreco(double precoInit) { // definindo o preco
+        preco = precoInit;
+    }
+
+    public void setQuantidadeEmEstoque(int quantidadeEmEstoqueInit) { // definindo a qtd em estoque
+        quantidadeEmEstoque = quantidadeEmEstoqueInit;
+    }
+
+    public String getNome() { // pegando o nome
+        return nome;
+    }
+
+    public double getPreco() { // pegando o preco
+        return preco;
+    }
+
+    public int getQuantidadeEmEstoque() { // pegando a quantidade em estoque
+        return quantidadeEmEstoque;
     }
 }
