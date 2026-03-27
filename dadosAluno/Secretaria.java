@@ -1,3 +1,6 @@
+package dadosAluno;
+import dadosAluno.Aluno;
+
 class Secretaria {
     public static void main(String[] args) {
         Aluno aluno = new Aluno();
