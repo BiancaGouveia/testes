@@ -1,9 +1,14 @@
 package empresa.dados;
-import empresa.dados.FolhaDePagamento;
+import empresa.dados.*;
 
-public class FolhaDePagamento {
-    public static void main (String[] args) {
-        Funcionario f = new Funcionario("Bianca", 5000.00);
-        System.out.println(f.obterInfo());
+class FolhaDePagamento {
+    public static void main(String[] args) {
+        Funcionario func = new Funcionario("Arnaldo", 5000.00);
+
+        System.out.println(func.obterInfo());
+        func.alterarQualquerSalario(func, 9000.00);
+
+        func.salario = 7000.00;
+        System.out.println(func.obterInfo());
     }
 }

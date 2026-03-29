@@ -2,15 +2,25 @@ package empresa.dados;
 
 public class Funcionario {
     private String nome;
-    private double salario;
+    public double salario;
 
-
-    // para que outras classes possam utilizar deste construtor usei o modificador de acesso public
-    public Funcionario(String nomeInit, double salarioInit) {  
+    // esse aqui é o construtor
+    public Funcionario(String nomeInit, double salarioInit) {
         nome = nomeInit;
         salario = salarioInit;
     }
+
     public String obterInfo() {
-        return "Nome: "+ nome +", salario: " + salario;
+        return "Nome " + nome + ", Salario: " + salario;
+    }
+
+    // metodo usando passagem por valor
+    public void aumentarSalario(double aumento) {
+        salario += aumento;
+        //aumento += 1000;
+    }
+    // metodo usando passagem por REFERENCIA
+    public void alterarQualquerSalario(Funcionario func, double novoSalario) {
+        func.salario = novoSalario;  
     }
 }
