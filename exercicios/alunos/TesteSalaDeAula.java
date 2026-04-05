@@ -1,5 +1,5 @@
-package alunos;
-import alunos.SalaDeAula;
+package exercicios.alunos;
+import exercicios.alunos.SalaDeAula;
 
 public class TesteSalaDeAula {
     public static void main(String[] args) {

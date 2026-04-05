@@ -1,4 +1,4 @@
-package dadosAluno;
+package exercicios.dadosAluno;
 import dadosAluno.Aluno;
 
 class Secretaria {

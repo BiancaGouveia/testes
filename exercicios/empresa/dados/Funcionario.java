@@ -1,4 +1,4 @@
-package empresa.dados;
+package exercicios.empresa.dados;
 
 public class Funcionario {
     private String nome;

@@ -1,5 +1,5 @@
 package empresa.dados;
-import empresa.dados.*;
+import exercicios.empresa.dados.*;
 
 class FolhaDePagamento {
     public static void main(String[] args) {

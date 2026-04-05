@@ -1,4 +1,4 @@
-package dadosAluno;
+package exercicicios.dadosAluno;
 
 class Aluno {
     private String nome

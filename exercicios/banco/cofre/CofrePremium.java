@@ -1,5 +1,5 @@
-package banco.cofre;
-import banco.cofre.CofreCliente;
+package exercicios.banco.cofre;
+import exercicios.banco.cofre.CofreCliente;
 
 public class CofrePremium extends CofreCliente {
     public CofrePremium (String nome, double dinheiro) {

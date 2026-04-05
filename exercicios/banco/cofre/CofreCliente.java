@@ -1,4 +1,4 @@
-package banco.cofre;
+package exercicios.banco.cofre;
 
 public class CofreCliente {
     protected String nome;
