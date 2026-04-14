@@ -1,0 +1,20 @@
+public class SomaNumeros {
+    public static void main(String[] args) {
+
+        int[] numeros = new int[1000];
+
+        // preencher de 1 até 1000
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = i + 1;
+        }
+
+        int soma = 0;
+
+        // somar os valores
+        for (int i = 0; i < numeros.length; i++) {
+            soma += numeros[i];
+        }
+
+        System.out.println("Soma: " + soma);
+    }
+}
