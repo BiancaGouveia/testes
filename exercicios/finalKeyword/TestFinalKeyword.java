@@ -9,7 +9,7 @@ final class ExemploFinal {
     }
 }
 
-public class TestFinalKeyword extends ExemploFinal {
+public class TestFinalKeyword {
     
      public static void main(String[] args) {
         ExemploFinal testFinal = new ExemploFinal();
