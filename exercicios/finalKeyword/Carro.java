@@ -4,4 +4,10 @@ final class Veiculo {
     }
 }
 
-public class 
+public class Carro extends Veiculo{ // ñ se estende class final
+    public static void main(String[] args) {
+        Veiculo func = new Veiculo();
+
+        System.err.println("está funcionando?");
+    }
+} 
