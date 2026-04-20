@@ -4,7 +4,7 @@ final class ExemploFinal {
     final int CODIGO_FIXO = 10;
 
     // Método final
-    final void meuMetodo() {
+    final void meuMetodo() { // não se extende classe final!
         System.out.println("Este é um método final.");
     }
 }
