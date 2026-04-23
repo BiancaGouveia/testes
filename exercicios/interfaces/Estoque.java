@@ -9,55 +9,54 @@ interface Produto {
 class ProdutoImpl implements Produto {
     private String nome;
     private int quantidade;
-
-    // Construtor
+    
+    // crio a partir daqui um construtor
     public ProdutoImpl(String nome, int quantidade) {
         this.nome = nome;
         this.quantidade = quantidade;
     }
 
-    @Override
+    @Override // indico aqui que sobrescrevi a instância 'getNome' da interface
     public String getNome() {
-        return nome;
-    }
+        return nome;  // aqui eu fiz o encapsulamento
+    } // retornando a instância criada nessa classe
+    
 
-    @Override
+    @Override // indico aqui que sobrescrevi a instância 'getQuantidade' da interface
     public int getQuantidade() {
-        return quantidade;
-    }
+        return quantidade; // aqui eu fiz o encapsulamento
+    } // retornando a instância criada nessa classe
 
-    @Override
+    @Override // indico aqui que sobrescrevi o método 'adicionarQuantidade' da interface
     public void adicionarQuantidade(int quantidade) {
-        if (quantidade > 0) {
-            this.quantidade += quantidade;
-        } else {
-            System.out.println("Quantidade inválida para adicionar.");
-        }
+        this.quantidade += quantidade; // CORRIGIDO (+=)
     }
 
-    @Override
+    @Override // indico aqui que sobrescrevi o método 'removerQuantidade' da interface
     public void removerQuantidade(int quantidade) {
-        if (quantidade > 0 && quantidade <= this.quantidade) {
+        if(this.quantidade >= quantidade) {
             this.quantidade -= quantidade;
         } else {
-            System.out.println("Quantidade insuficiente em estoque ou valor inválido.");
+            System.err.println("Quantidade insuficiente em estoque!");
         }
     }
 }
 
-public class Estoque {
+public class Main {
     public static void main(String[] args) {
-        Produto produto = new ProdutoImpl("Caneta", 50);
 
-        System.out.println("Produto: " + produto.getNome());
-        System.out.println("Quantidade em estoque: " + produto.getQuantidade());
+        // não tem como instanciar uma interface diretamente
+        Produto infProduto = new ProdutoImpl("Caneta", 50);
 
-        produto.adicionarQuantidade(20);
-        System.out.println("Após adicionar 20: " + produto.getQuantidade());
+        System.out.println("Produto: " + infProduto.getNome());
+        System.out.println("Quantidade em estoque: " + infProduto.getQuantidade());
 
-        produto.removerQuantidade(15);
-        System.out.println("Após remover 15: " + produto.getQuantidade());
+        infProduto.adicionarQuantidade(20);
+        System.out.println("nova quantidade após adição: " + infProduto.getQuantidade());
 
-        produto.removerQuantidade(100); // teste de erro
+        infProduto.removerQuantidade(15);
+        System.out.println("nova quantidade após remoção: " + infProduto.getQuantidade());
+    
+        infProduto.removerQuantidade(100);
     }
 }
