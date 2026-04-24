@@ -7,7 +7,7 @@ interface Interface2 {
 }
 
 
-abstract class ClasseExemplo implements Interface1, Interface2 {
+abstract class ClasseExemplo implements Interface1, Interface2 { // herança múltipla de tipo
     public void metodo1() {
         System.out.println("Método 1");
     }
