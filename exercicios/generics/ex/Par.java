@@ -1,4 +1,5 @@
 public class Par<T> { // classe genérica
+    
     private T primeiro; // valores do mesmo
     private T segundo; // tipo
 
