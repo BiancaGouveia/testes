@@ -17,7 +17,11 @@ public class ExcMap {
         System.out.println("quantidade disponpivel do produto 'P003': " + estoque.get("P003"));
 
         // removendo uma quantidade especifica de produto do estoque
-        estoque.remove("P002");
+        int quantidadeRemover = 5;
+        int quantidadeAtual = estoque.get("P002");
+        estoque.put("P002", quantidadeAtual - quantidadeRemover);
+
+        System.out.println("quantidade atual do estoque P002: " + estoque.get("P002"));
 
         // atualizando o estoque (lembrando que não é ordenado)
         System.out.println("estoque após remoção: " + estoque);
