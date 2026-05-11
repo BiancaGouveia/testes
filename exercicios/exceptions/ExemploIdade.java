@@ -1,4 +1,4 @@
-public class Main {
+public class ExemploIdade {
     public static void main(String[] args) {
         int idade = 15; // idade para verificação
  
